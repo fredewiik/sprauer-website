@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Mea+Culpa&display=swap" rel="stylesheet">
     <title>Sprauer Avocats</title>
-  <link rel="stylesheet" crossorigin href="/main-CdkZ6FA6.css">
+  <link rel="stylesheet" crossorigin href="/main-WkXj089q.css">
 </head>
 <body>
     <nav class="flex">
@@ -16,7 +21,7 @@
             <div class="fs-regular" style="font-size: 0.6rem;">AVOCATS - PARIS</div>
         </div>
         <div class="flex fs-regular" style="flex: 60% 0 1; justify-content: space-evenly;">
-            <a href="">Le cabinet</a>
+            <a href="#cabinet">Le cabinet</a>
             <a href="">Compétences</a>
             <a href="">Honoraires</a>
             <a href="">Publications</a>
@@ -30,13 +35,48 @@
             <h1 style="text-align: center; max-width: 22ch;">SPRAUER AVOCATS</h1>
             <p style="font-size: 2rem;">Défense pénale & Contentieux</p>
         </div>
-        <p style="grid-area: catcha; max-width: 50ch;"><span class="fs-title">S</span>écialisé en droit des affaires et en droit pénal, notre cabinet vous offre une expertise pointue et un accompagnement personnalisé. Défendez vos droits avec assurance grâce à notre expérience et notre engagement.</p>
+        <p style="grid-area: catcha; max-width: 55ch;"><span style="font-size: 1.7rem;" class="fs-title">S</span>pécialisé en droit des affaires et en droit pénal, notre cabinet vous offre une expertise pointue et un accompagnement personnalisé. Défendez vos droits avec assurance grâce à notre expérience et notre engagement.</p>
         <form class="flex flex-col" style="grid-area: form;" action="">
-            <h2><span style="color: var(--gold);">Contactez</span> votre avocat</h2>
+            <h2><span class="fs-gold">Contactez</span> votre avocat</h2>
+            <div class="flex flex-col">
+                <div class="flex flex-col">
+                    <label for="name">Votre nom et prénom</label>
+                    <input id="name" type="text" required>
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="name">Votre email</label>
+                    <input id="name" type="email" required>
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="name">Votre téléphone</label>
+                    <input id="name" type="tel" required>
+                </div>
+
+                <button>Envoyez votre demande</button>
+            </div>
         </form>
     </header>
 
-    <main></main>
+    <main>
+        <section id="cabinet" class="flex">
+            <div style="padding: 30px;">
+                <h2 class="fs-gold">— Le cabinet</h2>
+                <p>Notre devise : « Technicité, réactivité et transparence »</p>
+                <p>Situé au cœur du 9e arrondissement de Paris, notre cabinet d'avocats se distingue par une expertise technique haut de gamme, un engagement sans faille envers nos clients et offrons des solutions juridiques personnalisées et adaptées aux spécificités de chaque dossier qui nous est confié.</p>
+                <ul>
+                    <li>Spécialisé en Droit des affaires & Droit pénal</li>
+                    <li>Relation de confiance et de transparence</li>
+                    <li>Tarifs flexibles et personnalisés</li>
+                </ul>
+            </div>
+
+            <div style="padding: 50px;">
+                <img loading="lazy" src="/public/images/reunion.webp" alt="Salle de réunion du cabinet Sprauer">
+            </div>
+        </section>
+    </main>
 
     <footer></footer>
 </body>

@@ -26,6 +26,10 @@
     font-size: 2.2rem;
 }
 
+.fs-gold {
+    color: var(--gold);
+}
+
 .flex {
     display: flex;
 }
@@ -39,12 +43,19 @@ img {
     object-fit: cover;
 }
 
+li { font-size: 1.2rem; }
+li::marker {
+    color: var(--gold);
+}
+
 body {
     margin: 0;
     display: grid;
-    grid-template: "nav"  auto
+    grid-template: "nav "  auto
                    "head" 80vh
-                    / 1fr ;
+                   "main" 1fr
+                   "foot" auto
+                    / 1fr;
 }
 
 nav {
@@ -57,13 +68,14 @@ nav {
 }
 
 header {
-    position: relative;
-    padding: 100px;
-    color: white;
-    font-weight: lighter;
     grid-area: head;
+    line-height: 2;
+    position: relative;
+    text-wrap: balance;
+    padding: 70px;
+    color: white;
     display: grid;
-    gap: 40px;
+    gap: 30px;
     grid-template: "title   form"
                    "catcha  form"
                    / 2fr 1fr;
@@ -73,18 +85,52 @@ header > img {
     z-index: -1;
 }
 header > form {
+    padding: 20px;
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='white' stroke-width='2' stroke-dasharray='6%2c 14' stroke-dashoffset='27' stroke-linecap='square'/%3e%3c/svg%3e");
-    /* border: dashed 1px white; */
     background-color: var(--blue);
     border-radius: 30px;
     text-align: center;
 }
+header > form > div {
+    flex-grow: 1;
+    justify-content: space-evenly;
+    text-align: start;
+}
+header > form input {
+    border-radius: 8px;
+    background-color: var(--blue);
+    border: 1px solid white;
+    min-height: 35px;
+}
+input:focus {
+    border: 1px solid var(--gold);
+    outline: none;
+}
+header > form button {
+    background-color: var(--blue-light);
+    border-radius: 8px;
+    border: none;
+    min-height: 35px;
+    cursor: pointer;
+}
 
 main {
+    content-visibility: auto;
     grid-area: main;
+    display: grid;
+    line-height: 2;
+}
 
+main > section > * {
+    flex: 50% 0 0;
+}
+
+main > section img {
+    aspect-ratio: 3 / 2;
+    border-radius: 30px;
 }
 
 footer {
+    content-visibility: auto;
     grid-area: foot;
 }
