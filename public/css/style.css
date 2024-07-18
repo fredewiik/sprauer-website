@@ -147,7 +147,6 @@ input:focus {
 }
 
 button {
-    max-width: fit-content;
     background-color: var(--blue-light);
     border-radius: 8px;
     border: none;
