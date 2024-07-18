@@ -4,13 +4,23 @@ if (typeof(PhusionPassenger) !== 'undefined') {
 
 const express = require('express')
 const app = express()
+const path = require('path')
 const port = 3000
 
-const indexRouter = require('./routes/index')
 const publicationsRouter = require('./routes/publications')
 
-app.use('/', indexRouter)
+app.use((req, res, next) => {
+    // En-têtes de mise en cache pour toutes les réponses
+    res.set('Cache-Control', 'public, max-age=86400') // 86400s = 24 heures
+    next()
+})
+
+app.use(express.static(path.join(__dirname, '../public')))
+
 app.use('/publications', publicationsRouter)
+app.use((req, res, next) => {
+    res.status(404).sendFile(path.join(__dirname, '../public/404.html'));
+})
 
 if (typeof(PhusionPassenger) !== 'undefined') {
     app.listen('passenger')
