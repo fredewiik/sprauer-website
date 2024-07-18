@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="view-transition" content="same-origin">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Mea+Culpa&display=swap" rel="stylesheet">
@@ -17,21 +16,21 @@
 <body>
     <nav class="flex">
         <div class="flex flex-col">
-            <div class="fs-title">Sprauer</div>
+            <div class="fs-title" style="font-size: 2rem;">Sprauer</div>
             <div class="fs-regular" style="font-size: 0.6rem;">AVOCATS - PARIS</div>
         </div>
         <div class="flex fs-regular" style="flex: 60% 0 1; justify-content: space-evenly;">
             <a href="#cabinet">Le cabinet</a>
-            <a href="">Compétences</a>
-            <a href="">Honoraires</a>
-            <a href="">Publications</a>
-            <a href="">Contact</a>
+            <a href="#competences">Compétences</a>
+            <a href="#honoraires">Honoraires</a>
+            <a href="#">Publications</a>
+            <a href="#footer">Contact</a>
         </div>
     </nav>
 
     <header class="fs-regular">
         <img src="images/library.webp" alt="Librairie exposant plein de livres">
-        <div style="grid-area: title;">
+        <div style="grid-area: title; align-self: center;">
             <h1 style="text-align: center; max-width: 22ch;">SPRAUER AVOCATS</h1>
             <p style="font-size: 2rem;">Défense pénale & Contentieux</p>
         </div>
@@ -45,13 +44,13 @@
                 </div>
 
                 <div class="flex flex-col">
-                    <label for="name">Votre email</label>
-                    <input id="name" type="email" required>
+                    <label for="email">Votre email</label>
+                    <input id="email" type="email" required>
                 </div>
 
                 <div class="flex flex-col">
-                    <label for="name">Votre téléphone</label>
-                    <input id="name" type="tel" required>
+                    <label for="tel">Votre téléphone</label>
+                    <input id="tel" type="tel" required>
                 </div>
 
                 <button>Envoyez votre demande</button>
@@ -60,9 +59,9 @@
     </header>
 
     <main>
-        <section id="cabinet" class="flex">
-            <div style="padding: 30px;">
-                <h2 class="fs-gold">— Le cabinet</h2>
+        <section id="cabinet" class="grid grid-col-1-1">
+            <div>
+                <h2 class="fs-big fs-gold">— LE CABINET</h2>
                 <p>Notre devise : « Technicité, réactivité et transparence »</p>
                 <p>Situé au cœur du 9e arrondissement de Paris, notre cabinet d'avocats se distingue par une expertise technique haut de gamme, un engagement sans faille envers nos clients et offrons des solutions juridiques personnalisées et adaptées aux spécificités de chaque dossier qui nous est confié.</p>
                 <ul>
@@ -72,12 +71,110 @@
                 </ul>
             </div>
 
-            <div style="padding: 50px;">
-                <img loading="lazy" src="/public/images/reunion.webp" alt="Salle de réunion du cabinet Sprauer">
+            <img loading="lazy" src="images/reunion.webp" alt="Salle de réunion du cabinet Sprauer" style="aspect-ratio: 3/2; width: 90%; height: auto; margin: auto;">
+        </section>
+
+        <section class="grid grid-col-1-2">
+            <img loading="lazy" src="images/vincent-sprauer.webp" alt="Photo de face de maître Vincent Sprauer" style="aspect-ratio: 2/3; width: 80%;">
+
+            <div style="margin-block-start: 3rem;">
+                <h2 class="fs-big fs-gold">— Maître Vincent Sprauer</h2>
+                <p>Avocat inscrit au Barreau de Paris depuis 2019.
+                    Fort d'une double compétence en droit privé et en langues étrangères appliquées, Maître SPRAUER est diplômé de l'Université Paris 1 Panthéon-Sorbonne. Depuis 2019, il a forgé une solide expérience au sein de cabinets parisiens de renom, se distinguant dans des affaires complexes en droit pénal et droit des affaires. Son expertise s'étend à la défense des professionnels du chiffre et à l'accompagnement d'une clientèle diversifiée, tant en matière civile, commerciale que pénale. Faites confiance à un avocat polyvalent et expérimenté pour défendre vos intérêts avec rigueur et efficacité.</p>
             </div>
         </section>
+
+        <section class="grid grid-col-2-1">
+            <div style="margin-block-start: 3rem;">
+                <h2 class="fs-big fs-gold">— Maître Mélanie Miroite</h2>
+                <p>Avocate inscrite au Barreau de Paris, depuis 2019.
+                    Titulaire d’un Master 2 en droit des obligations civiles et commerciales délivré par l’Université Paris Descartes, Maître Mélanie MIROITE a acquis au fil des années, une connaissance pointue en droit d’asile et en droit des étrangers. Aujourd’hui, Maître Mélanie MIROITE plaide tous les jours devant la Cour Nationale du Droit d’Asile située à MONTREUIL, lui permettant ainsi de conseiller aux mieux ses clients sur la procédure et les attentes de cette juridiction.
+                    Maître Mélanie MIROITE est par ailleurs activement engagée dans les milieux associatifs participant à l’accueil et à l’insertion de personnes étrangères en France.</p>
+                </div>
+
+                <img loading="lazy" src="images/vincent-sprauer.webp" alt="Photo de face de maître Vincent Sprauer" style="aspect-ratio: 2/3; width: 80%;">
+        </section>
+
+        <div class="grid grid-col-2-1 gradient txt-white fs-big" style="margin-inline: -50px; place-items: center;">
+            <p><span class="fs-gold">Obtenez</span> votre analyse de dossier sur demande</p>
+            <button style="padding: 25px 35px;">Soumettre mon dossier</button>
+        </div>
+
+        <section id="competences" class="grid" style="place-items: center;">
+            <h2 class="fs-big fs-gold">COMPÉTENCES</h2>
+            <p class="fs-big">Nos services pour vous accompagner</p>
+            <div class="flex" style="gap: 3rem;">
+                <div class="grid card">
+                    <img src="images/justice.webp" alt="Balance de la justice" loading="lazy">
+                    <div>
+                        <h3>Droit des affaires</h3>
+                        <p>Contentieux civil et commercial 
+                            Droit des obligations et des contrats,
+                            Responsabilité civile des professionnels du chiffre (experts-comptables, commissaires aux comptes)
+                            Responsabilités ordinales
+                            Conflits entre associés</p>
+                    </div>
+                </div>
+                <div class="grid card">
+                    <img src="images/hammer.webp" alt="Marteau de la justice" loading="lazy">
+                    <div>
+                        <h3>Droit des affaires</h3>
+                        <p>Enquête / instruction
+                            Gardes à vue, auditions libres, confrontations 
+                            
+                            Juridictions répressives (tribunal de police, tribunal correctionnel, cour d’assises, Tribunal d’application des peines).
+                            Crimes et Délits, Aménagement de peines
+                            Procédures effacement TAJ/B2</p>
+                    </div>
+                </div>
+                <div class="grid card">
+                    <img src="images/chess.webp" alt="Échiquier" loading="lazy">
+                    <div>
+                        <h3>Droit des affaires</h3>
+                        <p>Abus de biens sociaux, Blanchiment,
+                            Fraude fiscale,
+                            Abus de confiance,
+                            Trafic d’influence, Corruption, Délits boursiers
+                            Compliance (Prévention et Gestion
+                            du risque pénal
+                            pour les entreprises
+                            et leurs dirigeants)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid" style="place-items: center;">
+            <h2 class="fs-big fs-gold">L’intervention de Vincent Sprauer sur BFM TV</h2>
+            <a class="fs-big underline" href="https://www.bfmtv.com/6cd8e4a5-390e-4c1a-abed-f2916c7c4765" target="_blank">Regarder la vidéo sur BFMTV</a>
+        </section>
+
+        <section id="honoraires">
+            <h2 class="fs-big fs-gold">Les honoraires</h2>
+            <p>Le cabinet pratique des honoraires flexibles adaptés à chaque client :</p>
+            <ul>
+                <li>Facturation au temps passé sur la base d'un taux horaire</li>
+                <li>Facturation forfaitaire selon la nature du dossier</li>
+                <li>Honoraires de résultat fixé à l'avance, en complément d'un autre mode de rémunération</li>
+                <li>Abonnement offrant un accès illimité aux conseils juridiques</li>
+            </ul>
+        </section>
+
+        <button style="justify-self: center;">Soumettre votre demande au cabinet</button>
     </main>
 
-    <footer></footer>
+    <footer id="footer" class="flex" style="justify-content: space-between;">
+        <div>
+            <p>SPRAUER AVOCATS <br>87, rue Taitbout <br>75009 - PARIS</p>
+            <p>Tél : 01 88 40 25 00</p>
+            <p>Jours et heures d'ouverture du cabinet :<br>du lundi au vendredi de 9h30 à 20h30 et le samedi sur rendez-vous.</p>
+            <p>Lignes de métro :</p>
+            <ul>
+                <li>Ligne 12 : Trinité d'Estienne d'Orves</li>
+                <li>Ligne 14 : Gare Saint-Lazare</li>
+            </ul>
+        </div>
+        <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.9934506184027!2d2.3328720763868875!3d48.877401399368644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e47e3bfaadd%3A0xfeed7376defc1ec2!2s87%20Rue%20Taitbout%2C%2075009%20Paris%2C%20France!5e0!3m2!1sfr!2skr!4v1721312152242!5m2!1sfr!2skr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </footer>
 </body>
 </html>
