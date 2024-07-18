@@ -1,3 +1,90 @@
-h1 {
-    color: red;
+:root {
+    scroll-behavior: smooth;
+    --blue: #213B6A;
+    --blue-light: #347EEE;
+    --gold: #DEAB29;
+}
+
+* {
+    box-sizing: border-box;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.fs-regular {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+}
+
+.fs-bold {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+}
+
+.fs-title {
+    font-family: "Mea Culpa", cursive;
+    font-size: 2.2rem;
+}
+
+.flex {
+    display: flex;
+}
+.flex-col {
+    flex-direction: column;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template: "nav"  auto
+                   "head" 80vh
+                    / 1fr ;
+}
+
+nav {
+    grid-area: nav;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 30px;
+    background-color: var(--blue);
+    color: white;
+}
+
+header {
+    position: relative;
+    padding: 100px;
+    color: white;
+    font-weight: lighter;
+    grid-area: head;
+    display: grid;
+    gap: 40px;
+    grid-template: "title   form"
+                   "catcha  form"
+                   / 2fr 1fr;
+}
+header > img {
+    position: absolute;
+    z-index: -1;
+}
+header > form {
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='white' stroke-width='2' stroke-dasharray='6%2c 14' stroke-dashoffset='27' stroke-linecap='square'/%3e%3c/svg%3e");
+    /* border: dashed 1px white; */
+    background-color: var(--blue);
+    border-radius: 30px;
+    text-align: center;
+}
+
+main {
+    grid-area: main;
+
+}
+
+footer {
+    grid-area: foot;
 }
