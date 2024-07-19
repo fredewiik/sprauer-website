@@ -12,6 +12,10 @@
     text-decoration: inherit;
 }
 
+.letterine {
+    font-size: 1.5em;
+}
+
 .fs-regular {
     font-family: "Libre Baskerville", serif;
     font-weight: 400;
@@ -54,7 +58,6 @@
 }
 .grid-col-2-1 {
     grid-template-columns: 2fr 1fr;
-    gap: 5rem;
 }
 
 .underline {
@@ -152,6 +155,7 @@ header > form input {
     background-color: var(--blue);
     border: 1px solid white;
     min-height: 35px;
+    padding: 5px;
 }
 input:focus {
     border: 1px solid var(--gold);
@@ -162,6 +166,7 @@ button {
     background-color: var(--blue-light);
     border-radius: 8px;
     border: none;
+    font-size: 1.1rem;
     min-height: 35px;
     padding: 15px;
     cursor: pointer;
@@ -206,6 +211,13 @@ section h2 {
     border-radius: 25px 25px 0 0;
     aspect-ratio: 1/1;
 }
+.card ul {
+    display: grid;
+    gap: 10px;
+}
+.card li {
+    font-size: 1rem;
+}
 
 footer {
     content-visibility: auto;
@@ -217,9 +229,33 @@ footer {
 }
 footer li {
     font-size: 1rem;
+    list-style: none;
+}
+footer li:nth-child(1) {
+    margin-block-end: 5px;
 }
 footer li::marker {
     color: white;
+}
+.M12::before {
+    content: '12';
+    background-color: green;
+    color: white;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    padding: 6px;
+    font-family: monospace;
+    margin-inline-end: 10px;
+}
+.M14::before {
+    content: '14';
+    background-color: purple;
+    color: white;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    padding: 6px;
+    font-family: monospace;
+    margin-inline-end: 10px;
 }
 
 .maps {
@@ -250,6 +286,18 @@ footer li::marker {
     right: 15px;
 }
 
+.ribbon {
+    margin-inline: -50px;
+    place-items: center;
+    padding-inline: 35px;
+    gap: 5rem;
+}
+
+#profil {
+    aspect-ratio: 2/3;
+    width: 80%;
+}
+
 @media screen and (max-width: 900px) {
     #🍔-btn {
         display: block;
@@ -261,5 +309,70 @@ footer li::marker {
 
     #form {
         display: none;
+    }
+
+    header {
+        grid-template: "title"
+                       "catcha"
+                       / 1fr;
+        place-items: center;
+        text-align: center;
+    }
+
+    #profil {
+        order: 1;
+        margin-inline: auto;
+    }
+
+    .grid-col-1-1 {
+        grid-template-columns: 1fr;
+    }
+    .grid-col-1-2 {
+        grid-template-columns: 1fr;
+    }
+    .grid-col-2-1 {
+        grid-template-columns: 1fr;
+    }
+
+    .ribbon {
+        gap: 1rem;
+        padding-block-end: 30px;
+    }
+
+    #competences .flex {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .maps {
+        flex: 40% 1 1;
+        aspect-ratio: 2 / 1;
+        margin-block: 1rem;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    body {
+        display: block;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .ribbon {
+        padding-inline: 50px;
+    }
+
+    #competences, #interview {
+        text-align: center;
+        text-wrap: balance;
     }
 }
