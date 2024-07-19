@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="view-transition" content="same-origin">
+    <meta name="description" content="Site du cabinet d'avocats Sprauer situé à Paris IXème, spécialisé en droit pénal, droit des affaires et droit pénal des affaires">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-MohPXm8Q.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32-rYQ7a8nq.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16-BY7AXXA0.png">
@@ -11,46 +12,59 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Mea+Culpa&display=swap" rel="stylesheet">
     <title>Sprauer Avocats</title>
-  <link rel="stylesheet" crossorigin href="/main-MHOAU5Qr.css">
+  <script type="module" crossorigin src="/main-Bz6MNyNC.js"></script>
+  <link rel="stylesheet" crossorigin href="/main-Bs-1m-Qe.css">
 </head>
 <body>
     <nav class="flex">
         <div class="flex flex-col">
             <div class="fs-title" style="font-size: 2rem;">Sprauer</div>
-            <div class="fs-regular" style="font-size: 0.6rem;">AVOCATS - PARIS</div>
+            <div style="font-size: 0.6rem;">AVOCATS - PARIS</div>
         </div>
-        <div class="flex fs-regular" style="flex: 60% 0 1; justify-content: space-evenly;">
+        <div id="navlinks" class="flex" style="flex: 60% 0 1; justify-content: space-evenly;">
             <a href="#cabinet">Le cabinet</a>
             <a href="#competences">Compétences</a>
             <a href="#honoraires">Honoraires</a>
             <a href="#">Publications</a>
             <a href="#footer">Contact</a>
         </div>
+        <div id="🍔-btn" class="grid pointer">
+            <svg id="hamburger" width="40" viewBox="0 0 20 20" version="1.1">
+              <path d="M3 5H17M3 10H17M3 15H17" stroke="white" stroke-linecap="round"></path>
+            </svg>
+        </div>
+          <div id="nav-hamburger" class="flex flex-col">
+            <a href="#cabinet">Le cabinet</a>
+            <a href="#competences">Compétences</a>
+            <a href="#honoraires">Honoraires</a>
+            <a href="#">Publications</a>
+            <a href="#contact">Contact</a>
+          </div>
     </nav>
 
-    <header class="fs-regular">
+    <header>
         <img src="/library-CwUeSRgK.webp" alt="Librairie exposant plein de livres">
         <div style="grid-area: title; align-self: center;">
             <h1 style="text-align: center; max-width: 22ch;">SPRAUER AVOCATS</h1>
             <p style="font-size: 2rem;">Défense pénale & Contentieux</p>
         </div>
         <p style="grid-area: catcha; max-width: 55ch;"><span style="font-size: 1.7rem;" class="fs-title">S</span>pécialisé en droit des affaires et en droit pénal, notre cabinet vous offre une expertise pointue et un accompagnement personnalisé. Défendez vos droits avec assurance grâce à notre expérience et notre engagement.</p>
-        <form class="flex flex-col" style="grid-area: form;" action="">
+        <form id="form" class="flex flex-col" style="grid-area: form; max-height: 600px;" action="">
             <h2><span class="fs-gold">Contactez</span> votre avocat</h2>
             <div class="flex flex-col">
                 <div class="flex flex-col">
                     <label for="name">Votre nom et prénom</label>
-                    <input id="name" type="text" required>
+                    <input id="name" type="text" autocomplete="name" required>
                 </div>
 
                 <div class="flex flex-col">
                     <label for="email">Votre email</label>
-                    <input id="email" type="email" required>
+                    <input id="email" type="email" autocomplete="email" required>
                 </div>
 
                 <div class="flex flex-col">
                     <label for="tel">Votre téléphone</label>
-                    <input id="tel" type="tel" required>
+                    <input id="tel" type="tel" autocomplete="tel" required>
                 </div>
 
                 <button>Envoyez votre demande</button>
@@ -84,9 +98,9 @@
             </div>
         </section>
 
-        <div class="grid grid-col-2-1 gradient txt-white fs-big" style="margin-inline: -50px; place-items: center;">
+        <div class="grid grid-col-2-1 gradient txt-white fs-big" style="margin-inline: -50px; place-items: center; padding-inline: 35px;">
             <p><span class="fs-gold">Obtenez</span> votre analyse de dossier sur demande</p>
-            <button style="padding: 25px 35px;">Soumettre mon dossier</button>
+            <a class="contents" href="#form"><button style="padding: 25px 35px;">Soumettre mon dossier</button></a>
         </div>
 
         <section id="competences" class="grid" style="place-items: center;">
@@ -149,7 +163,7 @@
             </ul>
         </section>
 
-        <button style="justify-self: center;">Soumettre votre demande au cabinet</button>
+        <a class="contents" href="#form"><button style="padding: 20px 30px; justify-self: center;">Soumettre votre demande au cabinet</button></a>
     </main>
 
     <footer id="footer" class="flex" style="justify-content: space-between;">
