@@ -178,8 +178,9 @@ button:hover {
 }
 
 main {
+    --padding: 50px;
     content-visibility: auto;
-    padding: 50px;
+    padding: var(--padding);
     grid-area: main;
     display: flex;
     flex-direction: column;
@@ -288,7 +289,7 @@ footer li::marker {
 }
 
 .ribbon {
-    margin-inline: -50px;
+    margin-inline: calc(-1*var(--padding));
     place-items: center;
     padding-inline: 35px;
     gap: 5rem;
@@ -338,6 +339,7 @@ footer li::marker {
     .ribbon {
         gap: 1rem;
         padding-block-end: 30px;
+        margin-inline: -20px;
     }
 
     #competences .flex {
@@ -365,7 +367,7 @@ footer li::marker {
     }
 
     main {
-        padding: 20px;
+        --padding: 20px;
         gap: 3rem;
     }
 
