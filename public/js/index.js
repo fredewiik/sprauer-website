@@ -14,18 +14,23 @@ window.addEventListener('click', (event) => {
 })
 
 // Scroll to top button
-// Utiliser l'Intersection Observer pour détecter quand l'élément sentinelle est visible
 let observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            $upBtn.style.display = "grid"
-        } else {
-            $upBtn.style.display = "none"
+            if (entry.target.id === 'VS') {
+                $upBtn.style.display = "grid"
+            } else {
+                $upBtn.style.display = "none"
+            }
         }
+    }, {
+        root: null, // Utilise le viewport comme conteneur de défilement
+        threshold: 0.5
     })
 })
 
 // Observer l'élément sentinelle
+observer.observe(document.querySelector("header"))
 observer.observe(document.getElementById("VS"))
 
 var $upBtn = document.getElementById("upBtn")
