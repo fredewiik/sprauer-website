@@ -10,6 +10,7 @@
     box-sizing: border-box;
     color: inherit;
     text-decoration: inherit;
+    font-family: inherit;
 }
 
 .letterine {
@@ -100,6 +101,26 @@ a:hover {
     color: white;
 }
 
+#upBtn {
+    display: none;
+    width: 60px;
+    place-content: center;
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #55555559;
+    color: white;
+    cursor: pointer;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+#upBtn:hover {
+    background-color: #333;
+}
+
 body {
     margin: 0;
     display: grid;
@@ -164,7 +185,7 @@ input:focus {
 
 button {
     background-color: var(--blue-light);
-    border-radius: 8px;
+    border-radius: 15px;
     border: none;
     font-size: 1.1rem;
     min-height: 35px;
@@ -196,12 +217,20 @@ section h2 {
     margin-block: 0;
 }
 
+#cabinet img {
+    aspect-ratio: 3/2;
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
 .card {
     box-shadow: -3px 8px 29px -4px rgba(0, 0, 0, 0.66);
     border-radius: 25px;
     grid-template-rows: minmax(0, auto) 1fr;
     flex: 30% 1 1;
     max-width: 370px;
+    text-align: left;
 }
 .card > div {
     padding: 15px;
@@ -274,18 +303,18 @@ footer li::marker {
     position: fixed;
     position: fixed;
     right: -250px;
-    top: 50px;
+    top: 55px;
     border: 2px solid white;
     padding: 25px;
     border-radius: 12px;
     z-index: 100;
     display: grid;
-    gap: 2rem;
+    gap: 1rem;
     background-color: var(--blue);
     transition: right 300ms ease;
 }
 #nav-hamburger[open] {
-    right: 15px;
+    right: 10px;
 }
 
 .ribbon {
@@ -368,7 +397,7 @@ footer li::marker {
 
     main {
         --padding: 20px;
-        gap: 3rem;
+        gap: 1rem;
     }
 
     .ribbon {
@@ -378,5 +407,15 @@ footer li::marker {
     #competences, #interview {
         text-align: center;
         text-wrap: balance;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .fs-big {
+        font-size: 1.5rem;
+    }
+
+    #cabinet img {
+        width: 100%;
     }
 }
